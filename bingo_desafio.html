@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Loteria</title>
+    </head>
+
+    <body>
+        <h3>Bingo</h3>
+        <input type="text" id="numero"/>
+        <button type="submit"id="verificar"> Adicione e verifique no bingo</button>
+        <script>
+            function mostra(frase){
+                document.write(frase+"<br>");
+            };
+            let n1=Math.round(Math.random()*60);
+            let n2=Math.round(Math.random()*60);
+            let n3=Math.round(Math.random()*60);
+            let n4=Math.round(Math.random()*60);
+            let n5=Math.round(Math.random()*60);
+            let n6=Math.round(Math.random()*60);
+
+            let segredo=[n1,n2,n3,n4,n5,n6];
+            console.log(segredo);
+            let escolhidos=[]
+
+            function adicionarSorteado (){
+                let numero= document.getElementById('numero').value;
+                for (let i=0; escolhidos.length<=5 ; i=i++){
+                    escolhidos.push(numero);
+                    console.log(escolhidos);
+                    break;
+                }
+                if (escolhidos[i]==segredo.value){
+                alert("voce acertou "+ (escolhidos[i])+"° posição!");
+                }else{
+                alert("Você errou!");
+                }
+            }
+                
+                
+            let botao=document.getElementById("verificar");
+            botao.onclick=adicionarSorteado
+
+        </script>
+    </body>
+    
+</html>

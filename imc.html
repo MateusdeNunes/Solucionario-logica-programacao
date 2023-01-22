@@ -1,0 +1,22 @@
+<script>
+var pulaLinha=function() {
+	document.write("<br>");
+};
+var mostra=function (frase) {
+	document.write("<big>"+frase+"</big>");
+	pulaLinha()
+};
+var calculaIMC = function(altura, peso) {
+	var imc = peso / (altura*altura);
+	return imc;
+};
+
+var peso=75;
+var altura=1.72;
+var imc=Math.round (calculaIMC(altura, peso));
+//fazendo o arredondamento aqui o erro almenta muito
+
+mostra("meu imc é " + imc);
+mostra("Ainda estou " + (imc-18.5).toFixed(2)+ " pontos acima do limite da magreza.");
+mostra("Estou " + (imc-35).toFixed(2)+ " pontos da obesidade.");
+</script>

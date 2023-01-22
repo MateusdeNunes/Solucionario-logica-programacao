@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teste</title>
+    </head>
+
+    <body style="background-color: rgb(244, 199, 21);">
+        <h3>Titulo</h3>
+        <script>
+            function pularLinha(){
+                document.write("<br>");
+            };
+            function mostra(frase){
+                document.write(frase);
+                pularLinha();
+            };
+            var numeroPensadoComCasasDecimais=Math.random()*10; //var numeroPensado=Math.round(Math.random())*100
+            var numeroPensado=Math.round(numeroPensadoComCasasDecimais);
+           // function numeroPensado(){
+            //    sorteia=(Math.round(Math.random())*100);
+            //    return sorteia;
+            //};
+            //var numeroPensado= (sorteia);
+            //termina tentando usar uma função
+            
+            var chute=prompt ("Já pensei. Qual você acha que é?");
+            if(isNaN(chute)){
+                mostra('Apenas números são válidos!');
+            }
+            if(chute==numeroPensado){
+                mostra("Uau! Você acertou, pois eu pensei no "+numeroPensado);
+            }else{
+                mostra('Você errou! Eu tinha pensado no '+numeroPensado)
+            }
+            if(chute<numeroPensado){
+                var diferenca=(numeroPensado/chute);
+                mostra("Você pensou um número "+diferenca.toFixed(2)+" vezes MENOR que o meu!");
+            }
+            if(chute>numeroPensado){
+                var diferencahuteMaior=(chute/numeroPensado);
+                mostra('Você pensou um número '+diferencahuteMaior.toFixed(2)+' vezes MAIOR que o meu!')
+            }
+        </script>
+    </body>
+    
+</html>

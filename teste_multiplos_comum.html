@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tabuada</title>
+    </head>
+
+    <body>
+        <h3>Tabuada</h3>
+        <script>       
+            var tabuadaA=prompt("Qual é o primeiro Multiplicador?");
+            //var limiteA=prompt("Até qual multiplicador?");
+            var tabuadaB=prompt("Qual o segundo multiplicador?");
+            //var limiteB=prompt("Até qual multiplicador?");
+            
+        
+
+            function mostra(frase){
+            document.write(frase+"<br>");
+            };
+            mostra("Tabuada de "+tabuadaA);
+
+            for(var multiplicador=1;tabuadaA<=10; multiplicador=multiplicador+1){
+                mostra(tabuadaA+" vezes "+ multiplicador+" é igual a "+ tabuadaA*multiplicador);
+            }
+
+            mostra("<br>"+"Tabuada de "+tabuadaB);
+
+            for(var multiplicador=1;tabuadaB<=10;multiplicador=multiplicador+1){
+                mostra(tabuadaB+" vezes "+ multiplicador+" é igual a "+ tabuadaB*multiplicador);
+            }
+           // while(tabuadaB<=limiteB){
+            //    mostra(tabuadaB*multiplicador);
+            //   multiplicador=multiplicador+1;
+            //}
+            
+            //if(resultadoA=resultadoB){
+                //mostra("é um multiplo comum!");
+            //}
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>teste</title>
+    </head>
+
+    <body>
+        <h3>teste</h3>
+
+        <input type="text" id="numero"/>
+        <input type="submit" id="adivinha"value="Compare com o segredo!"/>
+    
+        <script> 
+            var segredos=[16,34,37,42,50,58];
+            var caixaDoNumero=document.getElementById("numero");
+            //callback
+            function botaoClicado(){
+                for(var i=0;i<segredos.length;i=i+1){
+                    if(segredos[i]==caixaDoNumero.value){
+                        alert("Parabéns! Você acertou "+(segredo[i+1])+"°"+" dos números secretos.");
+                        return;
+                    }
+                }
+                alert('Infelizmente você errou!');
+            };
+            var botaoAdivinhar=document.getElementById("adivinha");
+            botaoAdivinhar.onclick=botaoClicado;
+        </script>
+    </body>
+    
+</html>

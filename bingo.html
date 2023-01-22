@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Antifraude</title>
+    </head>
+
+    <body>
+        <h3>Bingo</h3>
+        <input type="text" id="numero"/>
+        <button type="submit"id="verificar"> Adicione e verifique no bingo</button>
+        <script>
+            function mostra(frase){
+                document.write(frase+"<br>");
+            };
+            let sorteados=[];
+            function adicionarSorteado (){
+                let numero= document.getElementById('numero').value;
+                for (let i=0; i<sorteados.length; i=i+1){
+                    if (sorteados[i]==numero){
+                        alert("Numero já sorteado!");
+                        return;
+                    }
+                }
+                sorteados.push(numero);
+                console.log(sorteados);
+            }
+            let botao=document.getElementById("verificar");
+            botao.onclick=adicionarSorteado
+        </script>
+    </body>
+    
+</html>

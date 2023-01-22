@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tabuada</title>
+    </head>
+
+    <body>
+        <h3>Tabuada</h3>
+        <script>
+        function mostra(frase){
+            document.write(frase+"<br>");
+        };    
+        var multiplicador=0
+        var numero=prompt("A tabuada de qual número deve aparecer?");
+        var limite=prompt('Até qual multiplicados?');
+        while(multiplicador<=limite){
+            //mostra(7*multiplicador);
+            mostra(numero+" vezes "+ multiplicador+" é igual a "+ numero*multiplicador)
+            multiplicador= multiplicador+1; //incremento
+        }
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>teste</title>
+    </head>
+
+    <body>
+        <h3>teste</h3>
+        <script> 
+           function mostra(frase){
+                document.write(frase+"<br>");
+           };
+           var numeroPensado=Math.round(Math.random()*100);
+           var numeroDeTentativas=1;
+           while(numeroDeTentativas<=3){
+                var chute=prompt('Qual número entre 0 e 100 você acha que é?');
+                
+                if(chute==numeroPensado){
+                    alert("Parabéns, você acertou!");
+                    break;
+                } else{
+                    if(chute<numeroPensado){
+                        alert('Você ERROU.Pensei em um número MAIOR!');
+                    }
+                    if (chute>numeroPensado){
+                        alert("Você ERROU. Pensei em um número MENOR!");
+                    }
+                }
+                numeroDeTentativas++;
+           }
+           
+        
+        </script>
+    </body>
+    
+</html>

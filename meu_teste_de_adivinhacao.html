@@ -1,0 +1,42 @@
+//outro
+Multiplique o número escolhido por 2.
+Peça para seu amigo somar o número que você escolheu ao número que ele pensou e diga:
+Divida o número obtido por 2.
+Agora, subtraia do resultado o primeiro número que você pensou.
+"Adivinhe" o número. Desta vez, a resposta certa será a metade do número par que você escolheu.
+Por exemplo, se você escolher 10 e seu amigo escolher 3, veja como será a equação: 3 x 2 = 6. 6 + 10 = 16. 16 / 2 = 8. 8 – 3 = 5. E 5 é a metade de 10!
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teste</title>
+    </head>
+
+    <body>
+        <h3>Titulo</h3>
+        <script>
+            function pularLinha(){
+                document.write("<br>");
+            };
+            function mostra(frase){
+                document.write(frase);
+                pularLinha();
+            };
+            var numeroPensadoComCasasDecimais=Math.random()*10; //var numeroPensado=Math.round(Math.random())*100
+            var numeroPensado=Math.round(numeroPensadoComCasasDecimais); //preciso fazer ele escolher um numero par
+            var resultaado= (numeroPensado/2) 
+            
+            alert("Pense em um número natural entre 1 e 10!");
+            alert('Multiplique o número escolhido por 2.');
+            alert("Some o número "+numeroPensado+"ao seu número pensado.");
+            alert('Divida por 2');
+            alert('Agora, subtraia do resultado o primeiro número que você pensou.');
+            mostra("O número que você pensou foi: "+resultaado);
+
+        </script>
+    </body>
+    
+</html>

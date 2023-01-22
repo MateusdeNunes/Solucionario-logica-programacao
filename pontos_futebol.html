@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp.equiv="X-UA.Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teste</title>
+    </head>
+
+    <body>
+        <h3>Titulo</h3>
+        <script>
+            function pulaLinha(){
+                document.write("<br>");
+            };
+            function mostra(frase){
+                document.write(frase);
+                pulaLinha();
+            };
+            function calculaPontos (vitorias,empates,){
+                return ((vitorias*3)+parseInt(empates));
+            };
+            var vitorias=prompt('Quantos jogos o CDC Futebol Clube Venceu?');
+            var empates=prompt ('Quantos jogos o CDC Futebol Clube empatou?');
+            //var derrotas=prompt ('Quantas derrotas o CDC Futebol Clube teve?');
+           var vitoriasOutroTime= prompt('Quantos Jogos o Livros Velhos venceu?');
+            var empatesOutroTime=prompt('Quantos jogos o Livros Velhos empatou?');
+            //var derrotaOutroTime=prompt('Quantas derrotas o Livros velhos teve?');
+            var pontos= calculaPontos(vitorias,empates,);
+            var pontosOutroTime= calculaPontos(vitoriasOutroTime,empatesOutroTime,);
+
+            mostra('Nosso time tem '+pontos+' pontos!');
+
+            if(pontos>pontosOutroTime){
+                mostra("Nosso time está indo MELHOR que o Livros velhos!");
+            
+            }
+            if(pontos<pontosOutroTime){
+                mostra(<h3>"Nosso time está uma bosta!"</h3>);
+            }
+            if(pontos==pontosOutroTime){
+                mostra("Nosso time está EMPATADO com Livros Velhos!");
+            }
+        </script>
+    </body>
+    
+</html>

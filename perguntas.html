@@ -1,0 +1,38 @@
+
+<script>
+
+
+var pularLinha=function(){
+	document.write("<br>");
+};
+
+var mostra=function(frase) {
+	document.write(frase);
+	pularLinha()
+};
+var nome =prompt ("Bom Dia! Qual e seu nome?");
+document.write("Bem vindo, "+ nome);
+
+var idade = prompt (nome + ", quantos anos você tem?");
+document.write("<br>"+nome+" tem "+idade+ " anos.");
+
+var alturaDoUsuario= prompt ("Qual a sua altura?");
+var pesoDoUsuario =prompt ("Qual é o seu peso?");
+
+var calculaIMC = function(altura, peso) {
+	var imc = peso / (altura*altura);
+	return imc;
+};
+var imcDoUsuario=calculaIMC(alturaDoUsuario, pesoDoUsuario);
+mostra ("<br>o seu IMC é " + imcDoUsuario.toFixed(2));
+
+if (imcDoUsuario<18.5){
+	mostra('Seu IMC indica quue você está ABAIXO do peso.');
+}
+if(imcDoUsuario>35){
+	mostra('Seu IMC indica que você está ACIMA do peso.');
+}
+if(imcDoUsuario>=18.5 && imcDoUsuario<=35){
+		mostra('OK! Seu IMC está entre os dois limites.');
+}
+</script>
